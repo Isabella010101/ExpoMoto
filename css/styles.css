@@ -22,10 +22,11 @@
   background-size: cover;
   padding: 2em;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  flex-direction: row;
   align-items: center;
   color: var(--text-color);
-  text-align: center;
+  text-align: left;
 }
 
 #disclaimer h2,
@@ -108,19 +109,164 @@
 
 /* linha */
 .explore {
-  
+  background: var(--secondary);
+  font-size: 1.5rem;
+
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  text-align: center;
+
+}
+
+.linha {
+  display: flex;
+  justify-content:space-between;
+
+  margin: 40px;
+}
+
+.aventureios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+}
+
+.aventureios img {
+  height: 250px;
+  width: 250px;
+
+  border-radius: 1000px;
+}
+
+.aventureios span {
+  margin: 20px;
+}
+
+
+/* endereço */
+.endereco {
+  /* deixa a imagem escura */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/hd1.jpg) no-repeat;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+
+  padding: 30px;
+
+  color: var(--text-color);
+}
+
+.endereco i {
+  margin: 10px;
+}
+
+.endereco h2 {
+  color: var(--primary);
+  margin: 30px;
 }
 
 
 
+/* linha */
+.linha2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.moto1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 40px;
+}
+
+.moto1 img {
+  width: 500px;
+}
+
+.lista ul{
+  padding: 20px;
+}
+
+b {
+  font-size: 1.5rem;
+  margin: 20px;
+}
+
+
+
+/* gostou */
+.gostou {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/moto6.jpg) no-repeat;
+
+  color: var(--text-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.gostou b {
+  font-size: 1.0rem;
+  margin: 10px;
+}
+
+.gostou p {
+  background: var(--primary);
+  padding: 5px 30px;
+  margin: 10px;
+
+}
+
+.gostou p:hover {
+  background:#e05e07;
+  color:#d7d7d7;
+  cursor: pointer;
+}
+
+
+
+/* footer */
+footer {
+  background: var(--secondary);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .textinho {
+  display: flex;
+  flex-direction: row;
+
+  margin: 10px 0px;
+}
+
+.textinho b {
+  margin: 0;
+}
+
+.textinho p {
+  margin: 5px;
+}
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Media Queries */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   #event-subscription {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    text-align: left;
+    text-align: center;
   }
 
   #disclaimer h2 {
@@ -131,5 +277,24 @@
     font-size: 2em;
   }
 
-  
+
+  /* linha */
+  .linha {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aventureios {
+    margin: 0;
+  }
+
+
+  /* linha 2 */
+  .moto1 {
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px 0;
+  }
+
 }
